@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Portfolio of Mircea Bordeianu, specialising in industrial data, market intelligence, supply-chain analysis and decision support."
+    >
+
+    <title>Mircea Bordeianu | Data and Decision Support</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <nav class="navigation" aria-label="Main navigation">
+            <a class="brand" href="#home">Mircea Bordeianu</a>
+
+            <div class="navigation-links">
+                <a href="#profile">Profile</a>
+                <a href="#capabilities">Capabilities</a>
+                <a href="#experience">Experience</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <p class="eyebrow">
+                Industrial data · Market intelligence · Decision support
+            </p>
+
+            <h1>
+                Turning complex market and operational data into clear decisions
+            </h1>
+
+            <p class="hero-text">
+                I combine industrial market analysis, supply-chain experience,
+                forecasting and modern data tools to support management,
+                reporting and strategic decision-making.
+            </p>
+
+            <div class="hero-actions">
+                <a class="button primary-button" href="#projects">
+                    View projects
+                </a>
+
+                <a class="button secondary-button" href="#contact">
+                    Contact me
+                </a>
+            </div>
+        </section>
+
+        <section id="profile" class="content-section">
+            <p class="section-label">Professional profile</p>
+
+            <h2>Data management from intake to decision support</h2>
+
+            <p>
+                I am a Brussels-based market analysis and data professional
+                with experience in European industry, economic reporting,
+                forecasting, supply-chain planning and international
+                organisations.
+            </p>
+
+            <p>
+                My work focuses on collecting, validating, structuring,
+                analysing and presenting data for operational, commercial,
+                management and policy decisions.
+            </p>
+        </section>
+
+        <section id="capabilities" class="content-section">
+            <p class="section-label">Capabilities</p>
+
+            <h2>What I work with</h2>
+
+            <div class="card-grid">
+                <article class="card">
+                    <h3>Data management</h3>
+                    <p>
+                        Data collection, validation, quality control,
+                        reconciliation and database integrity.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <h3>Market intelligence</h3>
+                    <p>
+                        Industrial indicators, economic analysis, market
+                        reports and stakeholder-focused interpretation.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <h3>Supply-chain analysis</h3>
+                    <p>
+                        Forecasting, S&amp;OP, inventory, production planning,
+                        capacity analysis and scenario development.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <h3>Reporting and visualisation</h3>
+                    <p>
+                        Executive reporting, dashboards, Excel, SQL, Python,
+                        business intelligence and analytical communication.
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <section id="experience" class="content-section">
+            <p class="section-label">Selected experience</p>
+
+            <h2>Industry and international environments</h2>
+
+            <div class="experience-item">
+                <h3>EUROFER — European Steel Association</h3>
+                <p class="experience-role">
+                    Manager, Market Analysis and Economic Studies
+                </p>
+                <p>
+                    EU industrial data, market reporting, database quality,
+                    economic analysis and support for industry and
+                    policy-related work.
+                </p>
+            </div>
+
+            <div class="experience-item">
+                <h3>International supply-chain organisations</h3>
+                <p class="experience-role">
+                    Forecasting, planning and analytical roles
+                </p>
+                <p>
+                    Experience with Bridgestone, Abbott, Reckitt,
+                    Johnson &amp; Johnson, Allnex and Levi Strauss
+                    across forecasting, S&amp;OP and production planning.
+                </p>
+            </div>
+        </section>
+
+        <section id="projects" class="content-section">
+            <p class="section-label">Portfolio</p>
+
+            <h2>Selected analytical projects</h2>
+
+            <article class="featured-project">
+                <p class="project-status">Project in development</p>
+
+                <h3>Moldova–EU Integration Monitor</h3>
+
+                <p>
+                    A data and market-intelligence project presenting
+                    Moldova’s European integration milestones, indicators,
+                    progress and decision-relevant developments.
+                </p>
+
+                <p>
+                    The project will demonstrate data collection, validation,
+                    analysis, visualisation and executive reporting.
+                </p>
+            </article>
+        </section>
+
+        <section id="contact" class="content-section contact-section">
+            <p class="section-label">Contact</p>
+
+            <h2>Professional enquiries</h2>
+
+            <p>
+                Brussels, Belgium
+            </p>
+
+            <p>
+                <a href="mailto:m.bordeianu@gmail.com">
+                    m.bordeianu@gmail.com
+                </a>
+            </p>
+
+            <p>
+                <a href="tel:+32484600463">
+                    +32 484 600 463
+                </a>
+            </p>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>
+            © 2026 Mircea Bordeianu
+        </p>
+    </footer>
+</body>
+</html>
