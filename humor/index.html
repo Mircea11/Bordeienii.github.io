@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="ro">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Bordeienii Facts: glume despre Moldova, diaspora, sat și viața pe Lună.">
+  <title>Bordeienii Facts — Umor de pe Lună</title>
+  <style>
+    :root{color-scheme:dark;--bg:#0d1525;--panel:#17243a;--border:#43536d;--text:#f5f3ee;--muted:#bdc9db;--gold:#e5bd79;--focus:#9ac5ff;font-family:system-ui,-apple-system,"Segoe UI",sans-serif}
+    *{box-sizing:border-box}
+    body{margin:0;min-height:100vh;color:var(--text);background:radial-gradient(circle at 80% 6%,#344562 0,#0d1525 36%,#0a111e 100%)}
+    .shell{width:min(820px,calc(100% - 2rem));margin:0 auto;padding:2.3rem 0 3rem}
+    header{display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap}
+    .brand{color:var(--gold);font-weight:800;letter-spacing:.09em;text-decoration:none}
+    .badge{border:1px solid #67758c;border-radius:999px;padding:.4rem .85rem;color:var(--muted);font-size:.82rem}
+    .moon{width:84px;height:84px;border-radius:50%;background:radial-gradient(circle at 38% 33%,#f4e7c9 0,#d4b27a 53%,#8f7657 100%);box-shadow:0 0 55px #d8b06b38;margin:2rem 0 1rem}
+    h1{font-size:clamp(2.4rem,7vw,4.4rem);line-height:1.07;letter-spacing:-.045em;margin:.2rem 0 .7rem}
+    .subtitle{color:var(--muted);font-size:1.08rem;max-width:620px;margin:0 0 2rem}
+    .card{background:var(--panel);border:1px solid var(--border);border-radius:18px;padding:clamp(1.2rem,4vw,2rem);box-shadow:0 16px 45px #0003}
+    .label{font-size:.77rem;text-transform:uppercase;letter-spacing:.13em;color:var(--gold);font-weight:800}
+    blockquote{font-size:clamp(1.45rem,4vw,2.2rem);line-height:1.43;min-height:7.3rem;margin:1.6rem 0}
+    .rating,.controls{display:flex;flex-wrap:wrap;align-items:center;gap:.7rem}
+    .rating{border-top:1px solid var(--border);padding-top:1rem;margin-bottom:1.3rem}
+    button,select{font:inherit;border-radius:10px;border:1px solid #718099;padding:.7rem 1rem}
+    button{background:var(--gold);color:#161719;font-weight:700;cursor:pointer}
+    button:hover{filter:brightness(1.08)}
+    button:focus-visible,select:focus-visible,a:focus-visible{outline:3px solid var(--focus);outline-offset:3px}
+    button:disabled{opacity:.55;cursor:wait}
+    .vote{background:#243550;color:var(--text);min-width:90px}
+    .vote[aria-pressed="true"]{background:var(--gold);color:#17191c}
+    select{background:#243550;color:var(--text);max-width:100%}
+    #score{font-weight:700;margin-left:.3rem}
+    .muted,small{color:var(--muted)}
+    #status{min-height:1.5rem}
+    #topPanel{margin-top:1.2rem}
+    #topList{padding-left:1.4rem}
+    #topList li{margin:.9rem 0;line-height:1.5}
+    .textButton{border:0;background:none;color:var(--gold);font-weight:500;text-align:left;padding:.1rem}
+    .textButton:hover{text-decoration:underline}
+    footer{margin-top:1.8rem;color:var(--muted);font-size:.89rem;line-height:1.6}
+    footer a{color:var(--gold)}
+    [hidden]{display:none!important}
+  </style>
+</head>
+<body>
+<main class="shell">
+  <header>
+    <span class="brand">BORDEIENII · OAMENI DIN LUNĂ</span>
+    <span class="badge">Experiment de umor basarabean · v0.2</span>
+  </header>
+  <div class="moon" aria-hidden="true"></div>
+  <h1>Bordeienii Facts</h1>
+  <p class="subtitle">Fapte neverificate despre moldoveni. Probabil adevărate pe Lună. Glume originale, sat, diaspora, vin și oleacă de tehnologie.</p>
+
+  <section class="card" aria-label="Cititor de glume">
+    <div class="label">Gluma zilei — sau alta, dacă nu ți-a plăcut</div>
+    <blockquote id="joke" aria-live="polite">Se încarcă glumele…</blockquote>
+    <div class="rating" aria-label="Apreciază gluma">
+      <button class="vote" id="up" aria-label="Îmi place" aria-pressed="false">👍 <span id="upCount">0</span></button>
+      <button class="vote" id="down" aria-label="Nu îmi place" aria-pressed="false">👎 <span id="downCount">0</span></button>
+      <span id="score" aria-live="polite">Scorul meu: 0</span>
+    </div>
+    <div class="controls">
+      <select id="category" aria-label="Categoria glumelor"><option value="">Toate categoriile</option></select>
+      <button id="another">Altă glumă</button>
+      <button id="topButton" aria-expanded="false" aria-controls="topPanel">Topul meu</button>
+    </div>
+    <p id="status" class="muted" role="status"></p>
+    <small id="counter"></small>
+  </section>
+
+  <section class="card" id="topPanel" hidden aria-label="Glumele apreciate de mine">
+    <h2>Topul meu</h2>
+    <p class="muted">Aici vezi numai voturile salvate în acest browser. Clasamentul comunității va fi disponibil după conectarea serverului de vot.</p>
+    <ol id="topList"></ol>
+  </section>
+
+  <footer>
+    <p><strong>Versiune demonstrativă:</strong> voturile 👍/👎 se păstrează doar în browserul tău, nu sunt voturi publice comune. Nu se colectează date personale pe această pagină.</p>
+    <p>Colecția JSON poate fi citită public: <a href="./data/jokes.json">data/jokes.json</a>. Generarea de glume cu AI și voturile comunității vor fi adăugate ulterior.</p>
+  </footer>
+</main>
+<script>
+"use strict";
+const ids=["joke","category","another","up","down","upCount","downCount","score","topButton","topPanel","topList","status","counter"];
+const el=Object.fromEntries(ids.map(id=>[id,document.getElementById(id)]));
+const storageKey="bordeienii-v02-votes";
+let jokes=[],current=null,votes={};
+try{votes=JSON.parse(localStorage.getItem(storageKey)||"{}")||{}}catch(e){votes={}}
+function rating(id){
+  const v=votes[String(id)]||null;
+  return {up:v==="up"?1:0,down:v==="down"?1:0,score:v==="up"?1:v==="down"?-1:0,my_vote:v};
+}
+function render(j){
+  current=j;
+  el.joke.textContent=j.text;
+  const r=rating(j.id);
+  el.upCount.textContent=r.up;
+  el.downCount.textContent=r.down;
+  el.score.textContent="Scorul meu: "+(r.score>0?"+":"")+r.score;
+  el.up.setAttribute("aria-pressed",String(r.my_vote==="up"));
+  el.down.setAttribute("aria-pressed",String(r.my_vote==="down"));
+  el.counter.textContent=j.category+" · #"+j.id;
+}
+function randomJoke(){
+  const filtered=jokes.filter(j=>!el.category.value||j.category===el.category.value);
+  if(!filtered.length){el.status.textContent="Nu sunt glume în categoria aleasă.";return}
+  const alternatives=filtered.length>1?filtered.filter(j=>!current||j.id!==current.id):filtered;
+  render(alternatives[Math.floor(Math.random()*alternatives.length)]);
+  el.status.textContent="";
+}
+function vote(direction){
+  if(!current)return;
+  const key=String(current.id);
+  if(votes[key]===direction)delete votes[key];else votes[key]=direction;
+  try{localStorage.setItem(storageKey,JSON.stringify(votes))}
+  catch(e){el.status.textContent="Browserul nu permite salvarea voturilor."}
+  render(current);
+  if(!el.topPanel.hidden)showTop();
+}
+function showTop(){
+  const ranked=jokes.filter(j=>votes[String(j.id)])
+    .map(j=>({j,r:rating(j.id)}))
+    .sort((a,b)=>b.r.score-a.r.score||a.j.id-b.j.id);
+  el.topList.replaceChildren();
+  if(!ranked.length){
+    const li=document.createElement("li");li.textContent="Nu ai votat încă nicio glumă.";el.topList.append(li);return;
+  }
+  for(const item of ranked.slice(0,10)){
+    const li=document.createElement("li"),button=document.createElement("button");
+    button.className="textButton";
+    button.textContent=item.j.text+" ("+(item.r.score>0?"👍":"👎")+")";
+    button.addEventListener("click",()=>{render(item.j);el.topPanel.hidden=true;el.topButton.setAttribute("aria-expanded","false");});
+    li.append(button);el.topList.append(li);
+  }
+}
+el.another.addEventListener("click",randomJoke);
+el.category.addEventListener("change",randomJoke);
+el.up.addEventListener("click",()=>vote("up"));
+el.down.addEventListener("click",()=>vote("down"));
+el.topButton.addEventListener("click",()=>{
+  el.topPanel.hidden=!el.topPanel.hidden;
+  el.topButton.setAttribute("aria-expanded",String(!el.topPanel.hidden));
+  if(!el.topPanel.hidden)showTop();
+});
+(async function init(){
+  try{
+    const response=await fetch("./data/jokes.json",{cache:"no-cache"});
+    if(!response.ok)throw new Error("Colecția nu a putut fi încărcată.");
+    const data=await response.json();
+    if(!Array.isArray(data.jokes)||!data.jokes.length)throw new Error("Colecția este goală.");
+    jokes=data.jokes;
+    [...new Set(jokes.map(j=>j.category))].sort().forEach(category=>{
+      const option=document.createElement("option");
+      option.value=category;option.textContent=category;el.category.append(option);
+    });
+    randomJoke();
+  }catch(error){el.joke.textContent="Eroare la încărcare.";el.status.textContent=error.message;}
+})();
+</script>
+</body>
+</html>
