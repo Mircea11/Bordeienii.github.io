@@ -1,0 +1,157 @@
+{
+  "schema_version": "1.0.0",
+  "project": "Bordeienii — Moldovan Facts",
+  "language": "ro",
+  "jokes": [
+    {
+      "id": 1,
+      "category": "inventivitate",
+      "text": "Un moldovean nu aruncă lucrurile stricate. Le păstrează până când se strică ceva compatibil."
+    },
+    {
+      "id": 2,
+      "category": "sat",
+      "text": "În Moldova, GPS-ul spune: «După casa lui Vasile, faci dreapta.»"
+    },
+    {
+      "id": 3,
+      "category": "inventivitate",
+      "text": "Un moldovean nu are planul B. Are o magazie întreagă de alternative."
+    },
+    {
+      "id": 4,
+      "category": "inventivitate",
+      "text": "Când un moldovean spune «vedem noi», proiectul a intrat deja în faza de implementare."
+    },
+    {
+      "id": 5,
+      "category": "tehnologie",
+      "text": "Inteligența artificială poate răspunde la orice întrebare. Bunica moldoveancă știe și de ce ai întrebat."
+    },
+    {
+      "id": 6,
+      "category": "gastronomie",
+      "text": "În Moldova, «mai pune puțin» este o unitate de măsură gastronomică."
+    },
+    {
+      "id": 7,
+      "category": "inventivitate",
+      "text": "Moldoveanul nu inventează soluții provizorii. El creează tradiții tehnologice."
+    },
+    {
+      "id": 8,
+      "category": "bordeienii",
+      "text": "Bordeienii au ajuns pe Lună. Prima întrebare a fost dacă acolo crește vița-de-vie."
+    },
+    {
+      "id": 9,
+      "category": "familie",
+      "text": "O bunică moldoveancă nu întreabă dacă ți-e foame. Întreabă de ce nu mănânci."
+    },
+    {
+      "id": 10,
+      "category": "vin",
+      "text": "Beciul moldovenesc este singurul loc unde cercetarea, arhivarea și degustarea au aceeași adresă."
+    },
+    {
+      "id": 11,
+      "category": "tehnologie",
+      "text": "În Moldova, cloud-ul exista înainte de internet: se numea «am pus undeva, să fie»."
+    },
+    {
+      "id": 12,
+      "category": "diaspora",
+      "text": "Un moldovean plecat în străinătate poate uita trei parole, dar nu uită cine face cele mai bune plăcinte în sat."
+    },
+    {
+      "id": 13,
+      "category": "sat",
+      "text": "În sat, adresa completă este: «La poarta verde, peste drum de fostul magazin»."
+    },
+    {
+      "id": 14,
+      "category": "gastronomie",
+      "text": "Plăcintele moldovenești nu se numără. Se monitorizează rata de dispariție."
+    },
+    {
+      "id": 15,
+      "category": "familie",
+      "text": "La o masă moldovenească, locurile se termină după ce se termină musafirii. Nu invers."
+    },
+    {
+      "id": 16,
+      "category": "vreme",
+      "text": "În Moldova, prognoza meteo se verifică în trei locuri: pe telefon, pe cer și la bunica."
+    },
+    {
+      "id": 17,
+      "category": "tehnologie",
+      "text": "Un API moldovenesc nu returnează doar date. Îți spune și dacă ai mâncat."
+    },
+    {
+      "id": 18,
+      "category": "inventivitate",
+      "text": "Un moldovean nu pierde șuruburi. Le redistribuie strategic între proiecte."
+    },
+    {
+      "id": 19,
+      "category": "sat",
+      "text": "La moldoveni, «vin imediat» este o intenție, nu o coordonată GPS."
+    },
+    {
+      "id": 20,
+      "category": "vin",
+      "text": "În Moldova, un butoi gol nu este o problemă de stoc. Este începutul unui plan de producție."
+    },
+    {
+      "id": 21,
+      "category": "diaspora",
+      "text": "Moldoveanul are două fusuri orare: ora locală și ora la care poate vorbi mama."
+    },
+    {
+      "id": 22,
+      "category": "gastronomie",
+      "text": "O rețetă moldovenească are două cantități exacte: «cât trebuie» și «încă puțin»."
+    },
+    {
+      "id": 23,
+      "category": "bordeienii",
+      "text": "Pe Lună, Bordeienii nu caută viață inteligentă. Caută pe cineva cu care să stea la un ceai."
+    },
+    {
+      "id": 24,
+      "category": "vreme",
+      "text": "Când aplicația anunță ploaie, moldoveanul verifică dacă vecinul a scos rufele."
+    },
+    {
+      "id": 25,
+      "category": "tehnologie",
+      "text": "Un moldovean nu șterge folderele numite «final». Le numerotează: final, final2, final_adevărat."
+    },
+    {
+      "id": 26,
+      "category": "familie",
+      "text": "La moldoveni, «ia ceva la drum» poate însemna un pachet pentru trei zile."
+    },
+    {
+      "id": 27,
+      "category": "vin",
+      "text": "Un moldovean nu face backup la vin. Face încă un butoi."
+    },
+    {
+      "id": 28,
+      "category": "sat",
+      "text": "În satul moldovenesc, știrile circulă mai repede decât internetul, dar au mai multe versiuni."
+    },
+    {
+      "id": 29,
+      "category": "bordeienii",
+      "text": "Bordeienii au descoperit gravitația când au încercat să mute un butoi de vin pe Lună."
+    },
+    {
+      "id": 30,
+      "category": "diaspora",
+      "text": "Un moldovean poate locui în Bruxelles de zece ani și tot să spună «acasă» în două sensuri diferite."
+    }
+  ]
+}
